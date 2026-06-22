@@ -1,0 +1,19 @@
+/**
+ * @param {number} n
+ * @return {Function} counter
+ */
+var createCounter = function(n) {
+    let m = n;
+
+    return function() {
+        let current = m;
+        m++;
+        return current;
+    };
+};
+
+let counter = createCounter(10);
+
+console.log(counter()); // 10
+console.log(counter()); // 11
+console.log(counter()); // 12
